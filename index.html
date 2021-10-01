@@ -23,15 +23,15 @@
         let dog = document.querySelector("#dog");
         let dog_face = "left";
         dog.addEventListener("click",function () {
-            let dog_brak = new Audio('dog_brak.mp3');
+            let dog_bark = new Audio('music/dog_bark.mp3');
             if (dog_face === "left"){
                 dog.style.transform = "rotateY(180deg)";
                 dog_face = "right";
-                dog_brak.play();
+                dog_bark.play();
             } else if(dog_face === "right") {
                 dog.style.transform = "rotateY(0deg)";
                 dog_face = "left";
-                dog_brak.play();
+                dog_bark.play();
             }
         })
     </script>
