@@ -20,15 +20,18 @@
     </div>
 
     <script>
-        let dog=document.querySelector("#dog");
-        let dog_face="left";
+        let dog = document.querySelector("#dog");
+        let dog_face = "left";
         dog.addEventListener("click",function () {
-            if (dog_face==="left"){
-                dog.style.transform="rotateY(180deg)";
-                dog_face="right";
-            } else if(dog_face==="right") {
-                dog.style.transform="rotateY(0deg)";
-                dog_face="left";
+            let dog_brak = new Audio('dog_brak.mp3');
+            if (dog_face === "left"){
+                dog.style.transform = "rotateY(180deg)";
+                dog_face = "right";
+                dog_brak.play();
+            } else if(dog_face === "right") {
+                dog.style.transform = "rotateY(0deg)";
+                dog_face = "left";
+                dog_brak.play();
             }
         })
     </script>
